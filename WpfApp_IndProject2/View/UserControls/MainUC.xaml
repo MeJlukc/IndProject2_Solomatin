@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="WpfApp_IndProject2.View.UserControls.MainUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp_IndProject2.View.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="600"
+             d:DesignWidth="700"
+             FontFamily="Comic Sans Ms">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        
+        <Image Source="/Images/noroot.png"
+               Grid.RowSpan="2"
+               Stretch="UniformToFill"/>
+        <Border Grid.Row="0"
+                Background="#435560"
+                Width="550"
+                Height="70"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                CornerRadius="15"
+                Opacity="0.9"
+                Effect="{StaticResource MaterialDesignElevationShadow1}">
+
+            <TextBlock Text="Индивидуальный проект"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#FFFFFF"
+                       FontSize="18"
+                       FontWeight="SemiBold"/>
+        </Border>
+        <Border Grid.Row="1"
+                Margin="0 50 0 0"
+                Background="#435560"
+                Width="390"
+                Height="70"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                CornerRadius="15"
+                Opacity="0.9"
+                Effect="{StaticResource MaterialDesignElevationShadow1}">
+            
+            <TextBlock Text="Решение задач"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#FFFFFF"
+                       FontSize="38"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"/>
+        </Border>
+        <Border Grid.Row="1"
+                Margin="0 10 0 0"
+                Background="#435560"
+                Width="550"
+                Height="70"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                CornerRadius="15"
+                Opacity="0.9"
+                Effect="{StaticResource MaterialDesignElevationShadow1}">
+            <StackPanel>
+                <TextBlock Text="по дисциплине:"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Foreground="#FFFFFF"
+                           FontSize="20"
+                           Margin="5 10 0 0"/>
+                
+                <TextBlock Text="УП.01.01 Учебная практика. Основы программирования"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Width="540"
+                           Margin="5 0 0 0"
+                           Foreground="#FFFFFF"
+                           FontSize="20"
+                           TextAlignment="Left"/>
+            </StackPanel>
+        </Border>
+        <Button Style="{StaticResource MaterialDesignIconForegroundButton}"
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Background="#43556D"
+                Grid.Row="1"
+                Margin="0 0 0 80"
+                ToolTip="Перейти к заданиям">
+            
+            <materialDesign:PackIcon Kind="ArrowRight"
+                                     Foreground="#FFFFFF"
+                                     Width="30"
+                                     Height="30"/>
+        </Button>
+    </Grid>
+</UserControl>
